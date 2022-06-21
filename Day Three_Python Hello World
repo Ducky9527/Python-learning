@@ -1,0 +1,25 @@
+#在連續兩天的挫折後，我決定選擇比較沒有這麼挫折的方式繼續我的爬說嘴之旅
+
+#是的，我決定，來去youtube看教學、複習複習基礎先
+
+#我選的課程是Programming with Mosh這個youtuber的Python Tutorial - Python Full COurse for Beginners
+#<https://youtu.be/_uQrJ0TkZlc>
+
+
+#<<<Task 1 - print function>>>>
+
+#>>>>Print name
+print("Ducky9527")
+
+#easy peacey
+
+#python 3 的 print function語法跟python 2不大一樣，就只有這個要稍微注意一下而已
+
+#被 " " 或者是 ' ' 夾起來的東東叫做string(字串)
+
+#print這個function在python中可以有其他的變化，如
+
+print("*" * 10)
+#這個"*" 乘以10的意思是會生出十個**********
+#這不是每個語言都有的syntax sugar (之後會看到一些有這個syntax sugar的話人生會有多美好的例子）
+
