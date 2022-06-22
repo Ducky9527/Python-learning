@@ -12,14 +12,14 @@ print(age)
 把不是很確定到底是什麼樣的資料的東東用type()包起來就可以看到資料型態了
 
 如
-\\\python
+```python
 print(type(age))
-\\\
+```
 就會出現
 
-\\\python
+```python
 <class 'int'>
-\\\
+```
 
 ##練習題##
 **ask a user their weight in pounds and convert it to kilograms and print on the terminal***
