@@ -7,7 +7,7 @@ https://youtu.be/_uQrJ0TkZlc
 
 
 
-**Task 1 - print function**
+**Task 1 - Print Function**
 
 Print name
 把名字列印出來～
@@ -60,7 +60,7 @@ price = 20
 所以在此後執行print的話，會print出20來
 
 
-**Task Three - type of value**
+**Task Three - Type of Value**
 
 在python的世界裡，變數可以暫存string, integer, flooting, 還有bolean value(True, False)等等的東東
 
@@ -74,7 +74,7 @@ age = 20
 existing_patient = False
 ```
 
-**Task Four - input function**
+**Task Four - Input Function**
 input function可以用來輸入指令
 利用 + 可以把兩個string黏起來一起print出來
 
