@@ -38,7 +38,7 @@ name = "Ducky"
 type = "pokemon"
 ```
 
-如果要print出Ducky is a pokemon
+如果要print出Ducky is a pokemon.
 
 笨笨的做法可以寫成
 ```python
