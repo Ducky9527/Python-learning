@@ -28,7 +28,8 @@ print(name[-1])
 [1:-1] 則表示是從第二個字元開始，然後到右邊數來第一個字元之前的那個字元結束
 在這個case中，就是uck
 
-========
+**========**
+
 要print一串包含不同variable的訊息時，可以用formated string來做，這樣好寫也好懂
 
 比方說：
@@ -54,15 +55,28 @@ print(name + " is a " + type ".")
 
 好寫又好懂
 
-=======
+**=======**
+
 print搭配len()這個function可以計算string的長度
 
 python也有一些針對string的"method"
 好比說在name的屁屁後面加上.upper()
 
+```python
 name.upper()
+```
+
 這樣子在print(name.upper())時，本來的Ducky就會被輸出成DUCKY
-print(name.lower())則會輸出ducky
 
 
-name.find("D")則是會找在name中第一次出現D的位置是哪裡～
+```python
+print(name.lower())
+```
+則會輸出ducky
+
+
+```python
+name.find("D")
+```
+
+則是會找在name中第一次出現D的位置是哪裡～
