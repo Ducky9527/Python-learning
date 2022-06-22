@@ -57,7 +57,15 @@ print(name + " is a " + type + ".")
 
 **=======**
 
-print搭配`len()`這個function可以計算string的長度
+print搭配`len()`這個function可以計算string的長度，如
+```python
+name = "Ducky"
+print(len(name))
+```
+這個樣就會算出Ducky這個string的長度為5
+（注意，如果是integer，那就不能算，能算的是string!）
+
+
 
 python也有一些針對string的"method"
 好比說在name的屁屁後面加上`.upper()`
