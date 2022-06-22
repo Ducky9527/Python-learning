@@ -1,4 +1,4 @@
-<<<calculation>>>
+#calculation#
 
 ```python
 birth_year = int(input("birth year: "))
@@ -12,13 +12,17 @@ print(age)
 把不是很確定到底是什麼樣的資料的東東用type()包起來就可以看到資料型態了
 
 如
+///python
 print(type(age))
-
+///
 就會出現
-<class 'int'>
 
-練習題
-ask a user their weight in pounds and convert it to kilograms and print on the terminal
+///python
+<class 'int'>
+///
+
+##練習題##
+**ask a user their weight in pounds and convert it to kilograms and print on the terminal***
 
 第一次的嘗試
 ```python
@@ -43,7 +47,8 @@ print("so, that's " + str(kilo) + " kg.")
 ```
 成功～
 
-==
+========
+
 複習基本運算時，突然想到俗女養成記第二季時
 陳嘉玲她弟說到自己用一個app去計算自己還有多少時間可以陪在父母身邊，才發現其實自己以為的還有很多時間，根本一點也不多
 過去這十年來從台灣搬到英國，然後又搬到澳洲、荷蘭，一直到處飄泊，實際上跟家人相處的時間，不用算也知道少得嚇人
