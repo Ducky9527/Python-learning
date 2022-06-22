@@ -10,12 +10,15 @@ https://youtu.be/_uQrJ0TkZlc
 
 Print name
 把名字列印出來～
+這個function某意義上來說真是重要到不行啊，沒有他根本不知道自己的糞code都做了什麼...
+（沒有把print寫進程式的話，執行的話之後也不會顯示結果，因為「顯示結果」本身也是個需要被執行的事情啊！）
 
 ```python
 print("Ducky9527")
 ```
 
 easy peacey
+
 python 3 的 print function語法跟python 2不大一樣，就只有這個要稍微注意一下而已
 
 被 " " 或者是 ' ' 夾起來的東東叫做string(字串)
@@ -26,7 +29,7 @@ print這個function在python中可以有其他的變化，如
 print("*" * 10)
 ```
 
-這個"*" 乘以10的意思是會生出十個**********
+這個"*" 乘以10的意思是會生出十個 **********
 惱絲縮，這不是每個語言都有的syntax sugar (之後會看到一些有這個syntax sugar的話人生會有多美好的例子）
 
 
