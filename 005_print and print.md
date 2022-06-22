@@ -57,7 +57,7 @@ print(name + " is a " + type + ".")
 
 **=======**
 
-print搭配len()這個function可以計算string的長度
+print搭配`len()`這個function可以計算string的長度
 
 python也有一些針對string的"method"
 好比說在name的屁屁後面加上`.upper()`
@@ -79,4 +79,4 @@ print(name.lower())
 name.find("D")
 ```
 
-則是會找在name中第一次出現D的位置是哪裡～
+則是會找在`name`中第一次出現D的位置是哪裡～
