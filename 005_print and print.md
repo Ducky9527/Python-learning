@@ -51,7 +51,7 @@ print(name + " is a " + type + ".")
 因為formated string可以直接打出一串句子，然後用`{}`把variable包起來，讓python知道哪邊是variable
 
 寫成這樣
-`print(f'{name} is a {type}.'`
+`print(f'{name} is a {type}.')`
 
 好寫又好懂
 
