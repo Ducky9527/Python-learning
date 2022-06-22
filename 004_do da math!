@@ -1,7 +1,10 @@
 <<<calculation>>>
+
+```python
 birth_year = int(input("birth year: "))
 age = 2022 - birth_year
 print(age)
+```
 
 這邊要注意的是input function輸入的值預設為string
 所以要做運算的話，要在input function外面在包一層int() function把東東的資料型態轉成可以做運算的「整數」
@@ -18,25 +21,26 @@ print(type(age))
 ask a user their weight in pounds and convert it to kilograms and print on the terminal
 
 第一次的嘗試
-==
+```python
 question = int(input("What is your weight in pounds? > "))
 kilo = question * 0.45
 print("so, that's " + kilo + " kg.")
-==
+```
 
 跳出錯誤
+```python
 line 24, in <module>
     print("so, that's " + kilo + " kg.")
 TypeError: can only concatenate str (not "float") to str
-
+```
 忘記了只有字串才可以黏在一起，要把kilo這個floating的小寶寶的性質改成字串
 
 所以做第二次嘗試
-==
+```python
 question = int(input("What is your weight in pounds? > "))
 kilo = question * 0.45
 print("so, that's " + str(kilo) + " kg.")
-
+```
 成功～
 
 ==
@@ -48,7 +52,7 @@ print("so, that's " + str(kilo) + " kg.")
 
 所以我順手做了這個小程式，也當作是練習
 
-==
+```python
 age = int(input("你現在幾歲？ "))
 till_which_age = int(input("你想知道你到幾歲前，最多最多，大概還有多少天與親朋好友相處的時間？ 請輸入年齡： "))
 
@@ -56,13 +60,13 @@ max_day = (till_which_age - age) * 365
 one_month = (till_which_age - age) * 30
 print("你最多最多，大概還有" + str(max_day) + "天與親朋好友相處的時間喔～")
 print ("不過，如果未來每年大概都只有一個月可以回家的話，你就只有" + str(one_month) + "天的時間了ㄛ")
-==
+
 
 你現在幾歲？ 32
 你想知道你到幾歲前，最多最多，大概還有多少天與親朋好友相處的時間？ 請輸入年齡： 64
 你最多最多，大概還有11680天與親朋好友相處的時間喔～
 不過，如果未來每年大概都只有一個月可以回家的話，你就只有960天的時間了ㄛ
-
+```
 
 人蔘啊。
 
