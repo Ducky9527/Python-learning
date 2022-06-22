@@ -35,7 +35,7 @@ print("*" * 10)
 
 
 
-**variable**
+**Task Two - Variable**
 
 ```python
 price = 10
@@ -60,7 +60,7 @@ price = 20
 所以在此後執行print的話，會print出20來
 
 
-**Task two - type of value**
+**Task Three - type of value**
 
 在python的世界裡，變數可以暫存string, integer, flooting, 還有bolean value(True, False)等等的東東
 
@@ -74,7 +74,7 @@ age = 20
 existing_patient = False
 ```
 
-**Task Three - input function**
+**Task Four - input function**
 input function可以用來輸入指令
 利用 + 可以把兩個string黏起來一起print出來
 
