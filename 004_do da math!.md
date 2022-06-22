@@ -24,9 +24,9 @@ print(type(age))
 <class 'int'>
 ```
 
-**練習題
+**練習題**
 
-**ask a user their weight in pounds and convert it to kilograms and print on the terminal
+**ask a user their weight in pounds and convert it to kilograms and print on the terminal**
 
 第一次的嘗試
 ```python
