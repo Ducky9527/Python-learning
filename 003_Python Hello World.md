@@ -34,7 +34,7 @@ print("*" * 10)
 
 
 
-<<<variable>>>
+**variable**
 
 ```python
 price = 10
@@ -59,11 +59,12 @@ price = 20
 所以在此後執行print的話，會print出20來
 
 
-<<<<type of value>>>>
+**type of value**
+
 在python的世界裡，變數可以暫存string, integer, flooting, 還有bolean value(True, False)等等的東東
 
 
-練習題
+**練習題**
 we check in a patient named John Smith.
 He's 20 years old and is a new patient.
 ```python
@@ -72,7 +73,7 @@ age = 20
 existing_patient = False
 ```
 
-<<<input function>>>
+**input function**
 input function可以用來輸入指令
 利用 + 可以把兩個string黏起來一起print出來
 
@@ -81,7 +82,7 @@ name = input('Who are you? ')
 print('Hi!! ' + name)
 ```
 
-練習題
+**練習題**
 ```python
 name = input("Who are you? ")
 print("Hi! " + name)
