@@ -42,7 +42,7 @@ type = "pokemon"
 
 笨笨的做法可以寫成
 ```python
-print(name + " is a " + type ".")
+print(name + " is a " + type + ".")
 ```
 
 這樣寫很煩，因為一邊寫一邊還要注意空格有沒有空好空滿
