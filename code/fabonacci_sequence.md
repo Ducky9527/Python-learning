@@ -34,10 +34,10 @@ fibo_add = 1
 print(" ")
 print(f"餔嚕餔嚕餔嚕～～～下面是從第零項開始到第{input}項的數列")
 if step == 1:
-        print(fibo_start)
+    print(fibo_start)
 elif step == 2:
-        print(fibo_start)
-        print(fibo_add)
+    print(fibo_start)
+    print(fibo_add)
         
 elif step > 2 and step % 2 == 1:
     print(fibo_start)
@@ -54,7 +54,6 @@ elif step > 2 and step % 2 == 1:
 else:            
     print(fibo_start)
     print(fibo_add)
-    
     
     for iteration in range(int(real_compute_step / 2)):
         fibo_start += fibo_add
