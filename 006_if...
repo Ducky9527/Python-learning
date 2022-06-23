@@ -1,0 +1,70 @@
+`if`這個語法在可以幫助我們把一些常常發生的瑣事自動化
+ 好比說
+ 
+```python
+如果下雨了，就要關窗戶
+```
+在這種有明確的`若...則`的狀況下，這個語法就可以幫忙自動在前項條件滿足時觸發後面指定的動作
+我們可以用搭配boolean value （True, False）來寫一個小垃圾
+ 
+ ```python
+rain = True
+
+if rain:
+  print("下雨了！！！")
+  print("快關窗戶！！！")
+
+===
+下雨了！！！
+快關窗戶！！！
+```
+這邊的`if rain`後面加上一個`:`讓爬說嘴知道這是一個條件句，如果條件滿足了，要執行下面indent的指令(用indention標示從屬關係）
+在這個例子中，我們的條件是`if rain`，意即，倘若`rain`這個變項的值是True的的話
+因為我們給定為True，所以小程式就吐出下雨了快關窗戶
+
+=====
+只用一個`if`實在是太低能了
+我們做為高知識份子，深知大千世界之複雜，雨過會天晴，沒有天晴也可以來個憂鬱的陰天
+所以我們要善加利用`elif`這個指令去說明，遇到其他狀況要怎麼辦
+然後用`else`去說明，遇到上述情況以外的狀況，又要怎麼辦
+
+ 
+假設我們現在要寫一個自動化下雨關窗日出曬被的小程式（先假裝其他的自動化問題都不存在...）
+我們可以這麼做～
+ 
+ ```python
+rain = input("現在下雨嗎？ 是的話請輸入Y，不是的話請輸入N。").upper()
+#這邊用到.upper()這個method的原因是因為有些人可能輸入成小寫的y或是n
+#由於爬說嘴是個case sensitive的語言，所以我們把幫他通通翻譯成大寫的，等等會說明為什麼要這麼做
+ 
+if rain == "Y":
+#這邊的rain == "Y"的意思是，rain這個變項的值「就是」大寫的Y
+#所以整個的意思是，如果rain這個變項就是大寫的Y的話，那要執行下面的指令，這就是為什麼上面要用.upper()
+    print("快去關窗戶！")
+
+elif rain == "N":
+#同樣的這邊的rain == "N"的意思是，rain這個變項的值「就是」大寫的N
+#注意，elif沒有indent，跟if的位置是一樣的，表示其位階相同
+    print("珍惜陽光，速度曬被")
+else:
+    print("你胖手指？還是今天陰天？")
+======
+現在下雨嗎？ 是的話請輸入Y，不是的話請輸入N。y
+快去關窗戶！
+ 
+ ```
+ 
+用同樣的邏輯，做一個公斤與英磅的轉換小程式～
+```python
+weight = int(input('Weight: '))
+unit = input('You mean (L)bs or (K)g? Please type in L or K: ')
+
+
+if unit.upper == "L":
+    converted = weight * 0.45
+    print(f"you are {converted} kilos.")
+else:
+    converted = weight / 0.45
+    print(f"you are {converted} pounds.")
+```python
+ 
