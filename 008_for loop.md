@@ -64,7 +64,9 @@ total = 0 #起始值是零
 for item in price:
     total += item #開始按照順序，從第一個物件的價錢加總上total這個變項，更新total暫存的數值
     
-print(total) #因為我不想要看到每一次loop把item的價錢加總到total後更新total暫存的數值的過程，所以我把print拉到for loop外，等他loop完、更新完total後，我在印最後的總價
+print(total) 
+#因為我不想要看到每一次loop把item的價錢加總到total後更新total暫存的數值的過程
+所以我把print拉到for loop外，等他loop完、更新完total後，我在印最後的總價
 ```
 
 
@@ -106,8 +108,8 @@ for item in range(3):
 ======
 
 
-在參考這篇教學（https://medium.com/ccclub/ccclub-python-for-beginners-tutorial-4990a5757aa6）時看到了一個不是很了解的用法
-為什麼要先對先對theBeatles取len()然後才下for loop呢？
+在參考這篇教學 （https://medium.com/ccclub/ccclub-python-for-beginners-tutorial-4990a5757aa6） 時看到了一個不是很了解的用法
+
 
 ```python
 theBeatles = ['John Lennon', 'Paul McCartney', 'Ringo Starr', 'George Harrison']
@@ -119,7 +121,7 @@ Paul McCartney
 Ringo Starr
 George Harrison
 ```
-
+為什麼要先對先對theBeatles取len()然後才下for loop呢？
 實在無法自己參悟，就用了就用了Ｇ老師說的，不知道發生什麼事的時候，就找個地方用print當照妖鏡，讓他現出原形
 
 ```python
@@ -136,9 +138,9 @@ Ringo Starr
 George Harrison
 ```
 
-這樣終於看懂了，原來用`len()`去取的，是theBeatles這個變數目前暫存的清單的長度（因為有四個東東，所以長度為四）
-所以`range(len(theBeatles))`其實就只是利用這個清單的長度去設定loop要loop四次，依次把theBeatles裡的每個東東印出來而已
-實在是感恩Ｇ老師！讚嘆Ｇ老師！
-有什麼問題，print他一print，人生的困惑，就解開了至少一半了！
+這樣終於看懂了，原來用`len()`去取的，是theBeatles這個變數目前暫存的清單的長度（因為有四個東東，所以長度為四） 
+所以`range(len(theBeatles))`其實就只是利用這個清單的長度去設定loop要loop四次，依次把theBeatles裡的每個東東印出來而已 
+實在是感恩Ｇ老師！讚嘆Ｇ老師！ 
+有什麼問題，print他一print，人生的困惑，就解開了至少一半了！ 
 
-4
+
