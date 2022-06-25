@@ -71,8 +71,34 @@ else:
 乍看之下的一氣呵成，其實掩藏了我早早的奇偶分流！
 
 看了G老師的`while loop`版本後，我才意識到自己是因為什麼原因所以必須把code寫成這樣
-鄉親啊！`print`可以`print(fibo_even+fibo_odd)`啊！！！這樣就不用為了一定要把`fibo_even`跟`fibo_odd`兩兩一組印出來，搞這麼多功伕啊！！！
+因為...我一開始的思路很簡單很天真，覺得那我就分別讓奇次項跟偶次項會各自更新各自印出
+可是既然一次要印兩個，那我勢必每一次的loop就要印兩個出來，所以需要透過一開始印出幾項來調控
+這樣才能確保給定任意的長度，我的小費費都能handle，而不是只能吐出2n個
 
-我...
-我...我可以的!!!!
+但這樣子，其實跟費波那契數列直接用`fn = f(n-1) +f(n-2)`其實不大一樣
+可是，可是，可是，我...我不知道要怎麼弄啊啊啊！！！！
 
+G老師的(其實有錯，沒印出第零項跟第一項）版
+```python
+# Get f(n)
+n = int(input("Calculating Fibonacci's number to the nth term. Input n = "))
+
+# 前兩項trivial
+if n < 2:
+    print(n)
+    exit()
+
+# 設定一下記載前前項和前一項，以及現在是相對第i項來說
+last_last = 0
+last = 1
+i = 2
+while i < n:
+    # 等等 i 要加一我們要往下一項去了，於是前一項的值要更新成此時的此項
+    last = last_last + last # 此項值丟入前項暫存
+    last_last = last - last_last # 算出原本的前項，丟到前前項暫存
+    i += 1 # 我們完成ㄌ更新
+
+# 算此項然後輸出
+    
+    print(last + last_last)
+```
