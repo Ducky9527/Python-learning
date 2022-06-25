@@ -93,8 +93,6 @@ import random
 guess_time = 0
 guess_max_time = 3
 answer = random.randint(0,9)
-print(answer)
-
 
 while guess_time < guess_max_time:
     guess = int(input("Let's guess! Type in a number from 0 to 9! "))
@@ -115,17 +113,19 @@ print("Sorry. You fail.")
 2) 因為猜對了就不用再猜了，所以在猜對這邊有下一個叫做`break`的斷開迴圈的指令，其餘的狀況則可以繼續猜，猜到次數用完為止
 
 ====
+
 因為我太無聊了，所以又做了一個稍稍有變化的版本
 就，如果第一次猜錯，要再猜的時候，程式顯示的訊息會變成```Try again!```，以示鼓勵...
 
+
+第一次的版本
 ```python
 import random
 
 guess_time = 0
+guess_max_time = 3
 
 answer = random.randint(0,9)
-print(answer)
-
 
 while guess_time < 1:
     guess = int(input("Let's guess! Type in a number from 0 to 9! "))
@@ -139,7 +139,7 @@ while guess_time < 1:
     else:
         print("That's wrong. Lower.")
 
-while guess_time < 3:
+while guess_time < guess_max_time:
     guess = int(input("Try again!"))
     guess_time += 1
 
@@ -151,6 +151,52 @@ while guess_time < 3:
     else:
         print("That's wrong. Lower.")
 
-if guess_time == 3:
+if guess_time == guess_max_time:
     print("Sorry. You fail.")
 ```
+沒有想到第一個while loop如果猜中了，並且break後，會繼續進行下一個while loop，所以要調整
+
+
+想了一下，想到可以透過bolean value (True, False）來當成開關
+while loop要跑，必須在程式仍然會動的情況底下
+如果說第一把就猜對了，那就直接把程式切掉，這樣接下來的第二個while loop就不會動了！
+
+```python
+import random
+
+run = True #程式是否正在執行？預設為是（True）
+guess_time = 0
+guess_max_time = 3
+
+
+answer = random.randint(0,9)
+
+
+while guess_time < 1 and run == True: #用guess_time <1 去specify 這個loop只有第一次
+    guess = int(input("Let's guess! Type in a number from 0 to 9! "))
+    guess_time += 1
+
+    if guess == answer:
+        print(f"That's correct! The anwer is {answer}!")
+        run = False #猜中就把程式切掉
+        break
+    elif guess < answer:
+        print("That's wrong. Higher.")
+    else:
+        print("That's wrong. Lower.")
+
+while guess_time < guess_max_time and run == True:
+    guess = int(input("Try again!"))
+    guess_time += 1
+
+    if guess == answer:
+        print(f"That's correct! The anwer is {answer}!")
+        break
+    elif guess < answer:
+        print("That's wrong. Higher.")
+    else:
+        print("That's wrong. Lower.")
+
+if guess_time == guess_max_time:
+    print("Sorry. You fail.")
+
