@@ -120,7 +120,9 @@ Paul McCartney
 Ringo Starr
 George Harrison
 ```
-為什麼要先對先對theBeatles取len()然後才下for loop呢？  
+
+我猜大概是因為有些語言不能直接用for loop取theBeatles內的元素，要先對先對theBeatles取len()然後才下for loop吧  
+只是，做這件事情到底實際上是做了什麼？
 實在無法自己參悟，就用了就用了Ｇ老師說的，不知道發生什麼事的時候，就找個地方用print當照妖鏡，讓他現出原形  
 
 ```python
