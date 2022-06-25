@@ -198,4 +198,11 @@ for height in range(h):
         dot += "X"
         
     print(f"{space}{dot}")
+    
+====
+XXXXX
+YXXXX
+YYXXX
+YYYXX
+YYYYX
 ```
