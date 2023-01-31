@@ -165,7 +165,7 @@ W3Schools的regular expression教學我比較看得懂在做什麼（然後，�
 https://www.w3schools.com/python/python_regex.asp
 
 Ｇ惱絲推薦的regex可以測試自己到底express了什麼（娃喔～才知道，自己的以為，都只是自以為呢！）
-https://regex101.com/
+http://regexr.com/
 
 
 好，總之，我們需要先匯入`re`這個`module`才能開始express自己
