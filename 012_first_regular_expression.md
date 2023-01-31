@@ -245,3 +245,7 @@ for i in stat:
  
  
  (逃）
+ 
+ ====
+ ～～～完整糞扣，盡在github～～～
+ https://github.com/Ducky9527/programming/blob/master/regular_expression_and_email_data_mining.py 
