@@ -16,7 +16,7 @@
 
 清單範例
 ```python
-meow@gmail.com <meow@ncku.edu.tw>, quack <quack@gmail.com>, gurumeow@guru.com <gurumeow@guru.com>, furufuru@Gamil.com <furufuru@Gmail.com>
+meow@gmail.com <meow@gmail.com>, quack <quack@gmail.com>, gurumeow@guru.com <gurumeow@guru.com>, furufuru@Gamil.com <furufuru@Gmail.com>
 ```
 
 這邊可以看到，直接從收件人那邊複製貼上的話，我們得到的會是一長串的字串（string）
