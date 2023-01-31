@@ -15,14 +15,14 @@
 
 
 清單範例
-```
+```python
 meow@gmail.com <meow@ncku.edu.tw>, quack <quack@gmail.com>, gurumeow@guru.com <gurumeow@guru.com>, furufuru@Gamil.com <furufuru@Gmail.com>
 ```
 
 這邊可以看到，直接從收件人那邊複製貼上的話，我們得到的會是一長串的字串（string）
 我想到的處理方式是先透過`split()`這個method，把這一大串長長的字串分割成一個收件人一個收件人的樣子
 
-```
+```python
 mail = 'meow@gmail.com <meow@gmail.com>, quack <quack@ntu.edu.tw>, gurumeow@guru.com <gurumeow@guru.com>, furufuru@Gamil.com <furufuru@Gmail.com>'
 mail_list = mail.split(',')
 print(mail_list)
@@ -51,7 +51,7 @@ print(mail_list)
 簡單的說就是，我先寫一段小糞扣，找出`<` 跟 `>` 在`quack <quack@ntu.edu.tw>`這個字串的位置（index）
 然後再寫一段小糞扣說「把`<`出現的那個位置之後的字符(character)一個一個給我弄出來，弄到在`>`出現的位置之前的那個字符為止」
 
-```
+```python
 clean_address = [ ]
 sub1 = '<'
 sub2 = '>'
@@ -80,7 +80,7 @@ for address in mail:
 
 
 實際的運作方式，可以透過下面這個有一點點點不一樣的小範例來理解
-```
+```python
 ex = 'quack <quack@ntu.edu.tw>'
 
 sub1 = '<'
@@ -169,7 +169,7 @@ https://regex101.com/
 
 
 好，總之，我們需要先匯入`re`這個`module`才能開始express自己
-```
+```python
 import re
 
 
@@ -188,7 +188,7 @@ for address in clean_address:
 簡單說就是，regular expression可以透過小括號來挖出括號內的資料
 
 比方說，如果我想要挖出小老鼠前以及小老鼠後的字串，我可以這樣寫，最後會回傳一個很像list但是另有名稱的東東，叫做tuple
-```
+```python
 import re
 
 ex = 'quack@ntu.edu.tw'
@@ -212,7 +212,7 @@ print(mail)
 如果我的for loop處理到的item沒有出現在那個空空的list過，就丟進去
 這樣一來，我就可以確保我的清單都沒有重複的東東
 
-```
+```python
 classify = []
 for adr in mail_type:
     if adr not in classify:
@@ -224,7 +224,7 @@ for adr in mail_type:
 但我又不想要另外再花時間研究要怎麼樣在不另外用pandas這個小畜生的情況下做sorting
 所以我就...
 
-```
+```python
 stat = []
 for adr in classify:
     c = mail_type.count(adr)
@@ -257,7 +257,7 @@ for i in stat:
  「這不需要用到regular expression」
 
 彈指間，一串連re都不需要import的咒文，就這樣從螢幕的另一端浮現...
-```
+```python
  prefix, suffix = s.strip("<>").split("@")
 ```
 
