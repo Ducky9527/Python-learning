@@ -249,3 +249,18 @@ for i in stat:
  ====
  ～～～完整糞扣，盡在github～～～
  https://github.com/Ducky9527/programming/blob/master/regular_expression_and_email_data_mining.py 
+ 
+ 
+ ====
+ 後記中的後記，一直不斷反覆說regular expression很恐怖，能不要用就不要用的嗚喵老師在看了小糞扣後淡淡ㄉ縮
+ 
+ 「這不需要用到regular expression」
+
+彈指間，一串連re都不需要import的咒文，就這樣從螢幕的另一端浮現...
+```
+ prefix, suffix = s.strip("<>").split("@")
+```
+
+
+讚嘆。
+ 
