@@ -285,4 +285,4 @@ for i in stat:
 5.終於從Kleene algebra推出regular expression，證明 regular expression是一種Kleene algebra。而後從Kleene algebra與範疇論的角度證明regular expression與finite automata是等價的。此時只剩下1/3的學生存活。但真正搞懂regular expression的學生仍寥寥無幾。卻有少數的聰明學生掌握了regular expression的奧妙之處與各種性質。
 
 
-.....我想我應該在步驟就停修惹
+.....我想我應該在步驟一就停修惹
