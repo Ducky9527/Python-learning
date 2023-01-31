@@ -27,7 +27,7 @@ mail = 'meow@gmail.com <meow@gmail.com>, quack <quack@ntu.edu.tw>, gurumeow@guru
 mail_list = mail.split(',')
 print(mail_list)
 ====
-['meow@ncku.edu.tw <meow@ncku.edu.tw>', ' quack <quack@ntu.edu.tw>', ' gurumeow@guru.com <gurumeow@guru.com>', ' furufuru@Gamil.com <furufuru@Gmail.com>']
+['meow@gmail.com <meow@gmail.com>', ' quack <quack@ntu.edu.tw>', ' gurumeow@guru.com <gurumeow@guru.com>', ' furufuru@Gamil.com <furufuru@Gmail.com>']
 
 ```
 這邊這個做法的意思是，我先把這一串字串用mail這個變數存起來
