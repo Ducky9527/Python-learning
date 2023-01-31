@@ -269,7 +269,7 @@ for i in stat:
 
 後記中的後記中的後記
 
-```
+
 如是我聞，貓貓上師講經於龍眼樹下：
 
 數學系教regular expression的方法：
@@ -283,6 +283,6 @@ for i in stat:
 4.用範疇論與代數語言開始定義automata，在此處已經有一半的學生被當掉了。
 
 5.終於從Kleene algebra推出regular expression，證明 regular expression是一種Kleene algebra。而後從Kleene algebra與範疇論的角度證明regular expression與finite automata是等價的。此時只剩下1/3的學生存活。但真正搞懂regular expression的學生仍寥寥無幾。卻有少數的聰明學生掌握了regular expression的奧妙之處與各種性質。
-```
+
 
 .....我想我應該在步驟就停修惹
