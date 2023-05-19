@@ -10,3 +10,24 @@ data = r'"\u00e9\u0080\u0099\u00e5\u0080\u008b\u00e7\u00b5\u0090\u00e6\u009e\u00
 #as latin1 and then decode it as utf8
 decode_data = json.loads(data).encode('latin1').decode('utf8')
 print(decode_data)
+
+
+########
+
+
+#Advanced handling by Meow Meow
+
+
+def parse_obj(obj):
+    for key in obj:
+        if isinstance(obj[key], str):
+            obj[key] = obj[key].encode('latin_1').decode('utf-8')
+        elif isinstance(obj[key], list):
+            obj[key] = list(map(lambda x: x if type(x) != str else x.encode('latin_1').decode('utf-8'), obj[key]))
+        pass
+    return obj
+
+with open("FB_JSON.json") as f:
+    d = json.load(f, object_hook=parse_obj)
+
+print(d)
