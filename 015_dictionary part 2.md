@@ -51,8 +51,8 @@ the lord of the ring
 因為把資料dump下來比較複雜，所以請容我用下面的簡單例子做範例
 
 
-假設我們有一個list叫fruits
-這個list中有[‘banana', 'apple', 'watermelon']
+假設我們有一個`list`叫`fruits`
+這個`list`中有`[‘banana', 'apple', 'watermelon']`
 
 我們想要把這個水果清單轉成dictionary，並且，把每個水果都存到一個以他們在這個清單的次序而產生的key之下，我們可以這麼作
 
