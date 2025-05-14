@@ -21,7 +21,7 @@ Dictionary 的格式非常像是list，有些dictionary可以做到的事情，l
 
 我們可以用list去把這些資訊按照順序記錄起來
 
-```
+```python
 name_list = [‘老G’, ‘喵喵’, ‘貓貓’ ]
 birth_planet = [‘半人馬alpha星’, ‘地球’, ‘火星’ ]
 birth_year = [600, 900, 1000]
