@@ -120,3 +120,73 @@ for i in fruit:
 {'n': ['banana']}
 {'n': ['banana', 'apple']}
 {'n': ['banana', 'apple', 'watermelon']}
+
+```
+
+回到剛剛提的用index作為key，這邊需要稍微的離題一下，介紹一下利用很陽春的 `n += 1` 之術外，更佳簡潔的做法
+也就是`enumerate` 這個`function`
+
+
+`enumerate`這個`function`最基礎最基礎的用法，是用在一個長得跟`list`很像的、叫`tuple`（他婆）的東東上
+
+他們兩個長得真的很像，一個用中括號，一個用小括號
+```python
+l = []
+t = ()
+```
+
+`list`跟`tuple`最大的差別在於，`tuple`是`immutable`的
+也就是說，當我們建立了一個`tuple`串後，我們無法增加、減少、改變任何存在這個`tuple`下的值
+我們甚至無法對一個`tuple`直接使用`sort`這個`method`
+如果我們對真的要他進行`sort`，我們要先建立一個新的變數來儲存sort完後獲得的`list`
+是的，如果硬要，那我們會得到一個**全新的**、**不同的**類型的東東，原本的東東來是不變的tuple
+
+```python
+t = ('a', 'c', 'b')
+
+sorted_t = sorted(t)
+
+print(sorted_t)
+print(type(sorted_t))
+
+--
+['a', 'b', 'c']
+<class 'list'>
+
+```
+因為這些特性，所以如果我們要儲存的資料千千萬萬**不能夠被改動**的話，那我們就應該用`tuple`儲存，以防萬一
+
+
+當我們對一個`tuple`使用`enumerate`這個function時，我們可以得到存在這個tuple下的各個值的index，以及相對應的資料
+也就是說，我們會獲得index然後才是儲存在這個tuple的資料
+
+```python
+t = ('apple', 'banana', 'watermelon')
+
+x = enumerate(t)
+
+print(list(x))
+--
+[(0, 'apple'), (1, 'banana'), (2, 'watermelon')]
+
+```
+
+
+
+我們對這個`list`使用`enumerate`這個`function`後，我們就可以得到這個`list`內的東西的index還有對應到的東西
+搭配for loop使用時，因為enumerate這個function會給我們index跟value，所以我們要記得寫兩個變數
+
+```python
+fruit = ['banana', 'apple', 'watermelon']
+dic = {}
+for i, v in enumerate(fruit):
+    dic[i] = v
+    print(dic)
+
+--
+
+{0: 'banana'}
+{0: 'banana', 1: 'apple'}
+{0: 'banana', 1: 'apple', 2: 'watermelon'}
+
+```
