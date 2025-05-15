@@ -233,3 +233,7 @@ enumerate(iterable, start = 1)
 ```
 
 是的，enumerate的完整與法是上面寫的這樣！
+
+--
+現在終於可以開始說hash mapping了！
+
