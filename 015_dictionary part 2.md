@@ -228,7 +228,7 @@ for i, v in enumerate(fruit):
 如果要指定序數要從哪個數字開始，那也很簡單，在後面加上`start = x` 即可
 
 
-```
+```python
 enumerate(iterable, start = 1)
 ```
 
