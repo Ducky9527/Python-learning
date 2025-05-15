@@ -127,9 +127,10 @@ for i in fruit:
 也就是`enumerate` 這個`function`
 
 
-`enumerate`這個`function`最基礎最基礎的用法，是用在一個長得跟`list`很像的、叫`tuple`（他婆）的東東上
+`enumerate`這個`function`最基礎最基礎的用法，是用`list`跟`tuple`（他婆）
 
-他們兩個長得真的很像，一個用中括號，一個用小括號
+這邊需要離題一下
+`list`跟`tuple`他們兩個長得很像，一個用中括號，一個用小括號，但細部性質不大一樣
 ```python
 l = []
 t = ()
@@ -138,8 +139,8 @@ t = ()
 `list`跟`tuple`最大的差別在於，`tuple`是`immutable`的
 也就是說，當我們建立了一個`tuple`串後，我們無法增加、減少、改變任何存在這個`tuple`下的值
 我們甚至無法對一個`tuple`直接使用`sort`這個`method`
-如果我們對真的要他進行`sort`，我們要先建立一個新的變數來儲存sort完後獲得的`list`
-是的，如果硬要，那我們會得到一個**全新的**、**不同的**類型的東東，原本的東東來是不變的tuple
+如果我們對真的要他進行`sorted()`，我們要先建立一個新的變數來儲存sort完後獲得的`list`
+是的，如果硬要，那我們會得到一個**全新的**、**不同的**類型的東東，原本的東東還是不變的`tuple`
 
 ```python
 t = ('a', 'c', 'b')
@@ -157,24 +158,55 @@ print(type(sorted_t))
 因為這些特性，所以如果我們要儲存的資料千千萬萬**不能夠被改動**的話，那我們就應該用`tuple`儲存，以防萬一
 
 
-當我們對一個`tuple`使用`enumerate`這個function時，我們可以得到存在這個tuple下的各個值的index，以及相對應的資料
-也就是說，我們會獲得index然後才是儲存在這個tuple的資料
+當我們對一個`tuple`使用`enumerate`這個`function`時，`enumerate`就會像是一個序數生產器一樣
+以`tuple`中資料為基礎吐出該筆資料index以及該筆資料
+
+這邊要小心的事情是，如果直接print enumerate(t)的話，我們會得到類似下面的資訊
 
 ```python
 t = ('apple', 'banana', 'watermelon')
 
 x = enumerate(t)
+print(x)
 
-print(list(x))
 --
-[(0, 'apple'), (1, 'banana'), (2, 'watermelon')]
+<enumerate object at 0x10309a3e0>
 
+```
+會出現這個資訊的原因是因為，這邊的 `x` 實際上是一個``(‘序數’, ‘資料’)tuple產生器`，每叫他一次，他就生產一個`(‘序數’, ‘資料’)` 
+
+x指涉到的並不是下面這個完整的tuple list
+
+```python
+[(0, 'apple'), (1, 'banana'), (2, 'watermelon')]
+```
+
+所以如果我們直接執行 `print(x)`
+
+我們得到的資訊會是
+
+```
+<enumerate object at 0x10309a3e0>
+這是一個 enumerate 產生的物件，它現在存在電腦記憶體裡的位置是 0x10309a3e0。
+``
+
+真的要看到我們想要看到的一個個的 `(‘序數’, ‘資料’)` 
+
+我們需要再 `x` 這個 `iterator` （疊代器）上在施用`list()` 這個`function`
+
+讓 `x` 可以按著存在`tuple`或是`list`中的所有資料從頭到尾執行一次
+
+然後`list()`再把所有的`(‘序數’, ‘資料’) tuple` 給用`list`的方式存起來
+
+得到下面這個東東
+
+```python
+[(0, 'apple'), (1, 'banana'), (2, 'watermelon')]
 ```
 
 
-
-我們對這個`list`使用`enumerate`這個`function`後，我們就可以得到這個`list`內的東西的index還有對應到的東西
-搭配for loop使用時，因為enumerate這個function會給我們index跟value，所以我們要記得寫兩個變數
+回過頭來說說如何搭配for loop
+因為enumerate這個function會給我們一組有序數跟對應的儲存的值的`tuple`，所以我們要記得寫兩個變數
 
 ```python
 fruit = ['banana', 'apple', 'watermelon']
@@ -190,3 +222,14 @@ for i, v in enumerate(fruit):
 {0: 'banana', 1: 'apple', 2: 'watermelon'}
 
 ```
+
+這樣使用`enumerate()`，就不用另外再可憐兮兮的手刻 `n+=1` 計數器了
+
+如果要指定序數要從哪個數字開始，那也很簡單，在後面加上`start = x` 即可
+
+
+```
+enumerate(iterable, start = 1)
+```
+
+是的，enumerate的完整與法是上面寫的這樣！
