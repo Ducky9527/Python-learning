@@ -236,7 +236,9 @@ enumerate(iterable, start = 1)
 
 是的，enumerate的完整語法是上面寫的這樣！
 
+
 --
+
 現在終於可以開始說`hash mapping`了！
 
 `hash mapping`說穿了，其實就只是把資料轉成`dictionary`的格式儲存而已
