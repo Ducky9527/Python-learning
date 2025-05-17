@@ -1,14 +1,14 @@
 工作忙起來，又耽誤了學習...
 
-今天要記錄的心得是dictionary這個資料結構另外的妙用：Hash mapping
+今天要記錄的心得是dictionary這個資料結構另外的妙用：`Hash mapping`
 
-我本來也不知道這到底是什麼，是直到開始練習leetcode後，才發現原來dictionary可以這樣使用
+我本來也不知道這到底是什麼，是直到開始練習leetcode後，才發現原來`dictionary`可以這樣使用
 
-在某些任務上，用hash mapping做，可以比用list一個一個暴力的推過去要快上非常多，快到多少的程度，容我留待介紹two sum這個任務再說明
+在某些任務上，用`hash mapping`做，可以比用`list`一個一個暴力的推過去要快上非常多，快到多少的程度，容我留待介紹`two sum`這個任務再說明
 
 --
 
-在介紹hash mapping前，我們要先知道dictionary跟list一樣，都是可以增加新的資料進去的
+在介紹`hash mapping`前，我們要先知道`dictionary`跟`list`一樣，都是可以增加新的資料進去的
 
 list的做法是透過append這個method，如
 
@@ -23,13 +23,13 @@ print (l)
 
 ```
 
-那dictionary呢？
+那`dictionary`呢？
 
-要新增資料進 dictionary 的話，因為dictionary有`key`又有儲存在`key`裡面的`value`
+要新增資料進 `dictionary` 的話，因為`dictionary`有`key`又有儲存在`key`裡面的`value`
 
-我們的做法跟更新list會不大一樣
+我們的做法跟更新`list`會不大一樣
 
-以下面的例子來說，假設我們一開始的dictionary空空如也，我們想要新增一個叫做`book`的`key`，並且在book這個key下面儲存`the lord of the ring`
+以下面的例子來說，假設我們一開始的`dictionary`空空如也，我們想要新增一個叫做`book`的`key`，並且在book這個key下面儲存`the lord of the ring`
 那我們實際的做法會是這樣：
 
 ```python
@@ -44,7 +44,7 @@ the lord of the ring
 {'book': 'the lord of the ring'}
 ```
 
-聰明的小朋友看到這裡，一定就會想到，如果dictionary也可以新增資料，那是不是我們就可以透過for loop等loop，將表格資料、網頁資料用dictionary整理好
+聰明的小朋友看到這裡，一定就會想到，如果`dictionary`也可以新增資料，那是不是我們就可以透過`for loop`等`loop`，將表格資料、網頁資料用`dictionary`整理好
 
 答案是！！！沒錯！！！事實上，這就是老Ｇ老師幫忙我把`中國哲學書電子計畫`這個網站上的資料dump下來的方式
 
@@ -54,7 +54,7 @@ the lord of the ring
 假設我們有一個`list`叫`fruits`
 這個`list`中有`[‘banana', 'apple', 'watermelon']`
 
-我們想要把這個水果清單轉成dictionary，並且，把每個水果都存到一個以他們在這個清單的次序而產生的key之下，我們可以這麼作
+我們想要把這個水果清單轉成`dictionary`，並且，把每個水果都存到一個以他們在這個清單的次序而產生的`key`之下，我們可以這麼作
 
 ```python
 
@@ -99,13 +99,13 @@ for i in fruit:
 
 ```
 
-如果真的是想要把資料都寫在'n'這個key下面，那也不是不行，但這個時候，我們做的事情其實是把一個list存在這個key下
+如果真的是想要把資料都寫在`'n'`這個 `key`下面，那也不是不行，但這個時候，我們做的事情其實是把一個`list`存在這個`key`下
 
-所以我們要做的事情會是....`append` da list!
-要做這件事情前，我們要先記得...要開好一個空空如也的list
-不然python會吐出KeyError來
+所以我們要做的事情會是....`append` da `list`!
+要做這件事情前，我們要先記得...要開好一個空空如也的`list`
+不然python會吐出`KeyError`來
 
-開好了之後，我們就可以開始append這個list啦～
+開好了之後，我們就可以開始`append`這個`list`啦～
 
 ```python
 fruit = ['banana', 'apple', 'watermelon']
@@ -123,13 +123,14 @@ for i in fruit:
 
 ```
 
-回到剛剛提的用index作為key，這邊需要稍微的離題一下，介紹一下利用很陽春的 `n += 1` 之術外，更佳簡潔的做法
+回到剛剛提的用`index`作為`key`，這邊需要稍微的離題一下，介紹一下利用很陽春的 `n += 1` 之術外，更佳簡潔的做法
+
 也就是`enumerate` 這個`function`
 
 
 `enumerate`這個`function`最基礎最基礎的用法，是用`list`跟`tuple`（他婆）
 
-這邊需要離題一下
+這邊又需要再離題一下...
 `list`跟`tuple`他們兩個長得很像，一個用中括號，一個用小括號，但細部性質不大一樣
 ```python
 l = []
@@ -159,9 +160,9 @@ print(type(sorted_t))
 
 
 當我們對一個`tuple`使用`enumerate`這個`function`時，`enumerate`就會像是一個序數生產器一樣
-以`tuple`中資料為基礎吐出該筆資料index以及該筆資料
+以`tuple`中資料為基礎吐出該筆資料`index`以及該筆資料
 
-這邊要小心的事情是，如果直接print enumerate(t)的話，我們會得到類似下面的資訊
+這邊要小心的事情是，如果直接`print enumerate(t)`的話，我們會得到類似下面的資訊
 
 ```python
 t = ('apple', 'banana', 'watermelon')
@@ -173,9 +174,9 @@ print(x)
 <enumerate object at 0x10309a3e0>
 
 ```
-會出現這個資訊的原因是因為，這邊的 `x` 實際上是一個``(‘序數’, ‘資料’)tuple產生器`，每叫他一次，他就生產一個`(‘序數’, ‘資料’)` 
+會出現這個資訊的原因是因為，這邊的 `x` 實際上是一個`**(‘序數’, ‘資料’)tuple產生器**`，每叫他一次，他就生產一個`(‘序數’, ‘資料’)` 
 
-x指涉到的並不是下面這個完整的tuple list
+`x` 指涉到的並不是下面這個完整的 `tuple list`
 
 ```python
 [(0, 'apple'), (1, 'banana'), (2, 'watermelon')]
@@ -205,13 +206,13 @@ x指涉到的並不是下面這個完整的tuple list
 ```
 
 
-回過頭來說說如何搭配for loop
-因為enumerate這個function會給我們一組有序數跟對應的儲存的值的`tuple`，所以我們要記得寫兩個變數
+回過頭來說說如何搭配`for loop`
+因為`enumerate`這個`function`會給我們一組有序數跟對應的儲存的值的`tuple`，所以我們要記得寫兩個變數
 
 ```python
 fruit = ['banana', 'apple', 'watermelon']
 dic = {}
-for i, v in enumerate(fruit):
+for i, v in enumerate(fruit): #i = index, v = value
     dic[i] = v
     print(dic)
 
@@ -232,19 +233,19 @@ for i, v in enumerate(fruit):
 enumerate(iterable, start = 1)
 ```
 
-是的，enumerate的完整與法是上面寫的這樣！
+是的，enumerate的完整語法是上面寫的這樣！
 
 --
-現在終於可以開始說hash mapping了！
-hash mapping說穿了，其實就只是把資料轉成dictionary的格式儲存
-他的優點在於，電腦在找dictionary裡的資料時，可以直接看到dictionary裡所有的key、value
-所以，當一個list被轉換成dictionary時，電腦就不用苦命的每字都從list中的第一項開始查詢
+現在終於可以開始說`hash mapping`了！
+`hash mapping`說穿了，其實就只是把資料轉成`dictionary`的格式儲存而已
+他的優點在於，電腦在找`dictionary`裡的資料時，可以直接看到`dictionary`裡所有的`key`、`value`
+所以，當一個`list`被轉換成`dictionary`時，電腦就不用苦命的每字都從`list`中的第一項開始查詢
 
-比方說，我有一個list = [1, 3, 7, 8]
+比方說，我有一個`list = [1, 3, 7, 8]`
 
-我想要知道，我這個list裡面儲存的數值中，哪兩個加總起來會是9
+我想要知道，我這個`list`裡面儲存的數值中，哪兩個加總起來會是9
 
-如果我用for loop直接對這個list做，我的邏輯就會是這樣
+如果我用`for loop`直接對這個list做，我的邏輯就會是這樣
 
 ```python
 """
@@ -261,7 +262,7 @@ count = 0
 found = False
 
 for i in range(len(l)): # 用這樣的方式告訴程式要執行幾次
-    for j in range(len(l)-1): # 記得要相加的是第一項之後的
+    for j in range(len(l)-1): # 記得要減一不然會out of range
         count+=1
         if l[i]+l[j+1] == target:
             print (f'the target is {target} and the combination is {l[i]} and {l[j+1]}')
@@ -275,27 +276,28 @@ the target is 9 and the combination is 1 and 8.
 It takes 3 search to find the combination.
 ```
 
-在這個case中，我們很幸運的只在內層的for loop (J) 做了三次loop就找到
+在這個case中，我們很幸運的只在內層的 `for loop (J)` 做了三次loop就找到
 
-也就是說，我們甚至沒有進入外層的for loop (I) 第二次、我們只掃過這個list一次而已
+也就是說，我們甚至沒有進入外層的 `for loop (I) `第二次、我們只掃過這個`list`一次而已
 
-可是，如果，我們很衰，存在這個list的值雖然一模一樣，但是數值排序不一樣呢？
+可是，如果，我們很衰，存在這個`list`的值雖然一模一樣，但是數值排序不一樣呢？
 
-如果我們的list是下面這樣呢
+如果我們的list是下面這樣呢？？
 
 ```
 l = [3, 7, 1, 8]
 ```
 
-是的，以三為基準，掃過整個list一次，沒用
-再來，以七為基準，掃過整個list一次，沒用
+是的，以三為基準，掃過整個list一次，沒找到！
+再來，以七為基準，掃過整個list一次，沒找到！
 要直到以一為基準，做到最後一次，才真的找到1+8這個組合
 總共要做九次！！
 速度差很多啊！
 
 
-對我們人類來說，這個 `list` 怎麼排，我們其實都可以只掃過這個 `list` 一次就找到答案
-因為當我們看到三的時候，我們就知道等下要是看到六，那我們就找到組合了
+對我們人類來說，不管這個 `list` 裡的東西是怎麼排的，我們都可以只掃過這個 `list` 一次就找到答案
+
+這是因為，因為當我們看到三的時候，我們就知道等下要是看到六，那我們就找到組合了
 但因為我們看到的不是六，是七，所以我們在無奈之餘，能做的就是先把三記在心裡，等等看會不會看到六
 也就是說，我們會在心裡面偷偷開好一個記事板，等等隨時可以把暫時書寫在上面的三拿下來比對
 接下來的七也是一樣的做法，我們看到七的時候，我們知道我們需要一個二才能跟湊出一個九
@@ -325,27 +327,28 @@ for i, v in enumerate(l):
 ```
 
 用資工人的語彙就是
-用`hash mapping`來處理這個找出數字組合的問題的話，他的`時間複雜度`是 `O(n)`
+用`hash mapping`來處理這個找出數字組合的問題的話，他的`時間複雜度(time complexity)`是 `O(n)`
 
-這邊的 `O(n)` 的意思是說，每個數字只處理一次，每次查找或插入都是 `O(1)`
+這邊的 `O(n)` 的意思是說，每個數字只處理一次，每次查找或插入都是 `O(1)` (執行一次）
+假若我們有n個數值，那我們就處理共 `（n*1）` 次
 
 時間複雜度這個觀念在程式設計裡很重要，因為我們之所以會想要寫程式，往往是因為我們希望程式可以來幫我們重複執行某某動作很多很多次
 這也是為什麼，我們會想知道，當要處理的檔案、資料變大時，不同策略所需的時間會以什麼方式增長
 
-這個 `Big-O` 就是一個幫我們衡量時間複雜度的客觀標準
+這個 `Big-O` 就是一個幫我們衡量`時間複雜度`的客觀標準
 
 我一開始使用的`nested for loop`在最糟的狀況下，會需要把內外兩層都跑過一次
 假設內外兩層都有 `n` 個東東，那我最糟最糟的狀況，就是要跑 `n*n` 次，也就是 `n^2` 次！！！
 
 如果我的`list`只有2個東東，那最糟最糟，用`nested for loop`跑，就是跑 4 次
-
-但如果我增長到 4 個東東呢？最糟最糟，要跑 1 6次！
-
-中間的增長是以平方的方式`（O (n^2)）`在增加，非常的可怕
+但如果我增長到 4 個東東呢？最糟最糟，要跑 16 次！
+中間的增長是以平方的方式`（O (n^2)）`在增加，非常的可怕！！！
 
 跟hash mapping這樣以線性的方式`(O(n))`增加不一樣
 
+
 那...查字典在資料的大小改變下，會怎麼影響運算的速度呢？
+
 
 答案就在剛剛說的「一目瞭然」
 
