@@ -344,3 +344,5 @@ for i, v in enumerate(l):
 中間的增長是以平方的方式`（O (n^2)）`在增加，非常的可怕
 
 跟hash mapping這樣以線性的方式`(O(n))`增加不一樣
+
+這邊介紹的找出哪兩個數字加起來會是目標數字的任務，就是leetcode的TwoSum~
